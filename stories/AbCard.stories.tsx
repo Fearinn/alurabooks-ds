@@ -1,16 +1,17 @@
 import React from 'react';
-import { AbCard } from '../src';
+import { AbCard, AbTag } from '../src';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import IAbCard from '../src/interfaces/Card';
 
 export default {
   title: 'Components/AbCard',
   component: AbCard,
 } as ComponentMeta<typeof AbCard>;
 
-export const AbCardComponent = () => {
-  return (
-    <AbCard>
-      <h1>Olá, eu sou um card</h1>
-    </AbCard>
-  );
-};
+const Template: ComponentStory<typeof AbCard> = (args: IAbCard) => <AbCard {...args}/>;
+
+export const Default = Template.bind({});
+
+Default.args = {
+  children: "I'm a card",
+} as IAbCard;
