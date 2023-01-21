@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export default interface IAbCard {
-    children?: JSX.Element;
+    children?: ReactNode;
   }
