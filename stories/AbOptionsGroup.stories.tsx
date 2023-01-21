@@ -1,7 +1,7 @@
 import React from 'react';
 import { AbOptionsGroup } from '../src';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { IOptionsGroup } from '../src/interfaces/Option';
+import { IAbOptionsGroup } from '../src/interfaces/Option';
 // import IOptionsGroup from '../src/interfaces/OptionsGroup';
 
 export default {
@@ -10,7 +10,7 @@ export default {
 } as ComponentMeta<typeof AbOptionsGroup>;
 
 const Template: ComponentStory<typeof AbOptionsGroup> = (
-  args: IOptionsGroup
+  args: IAbOptionsGroup
 ) => <AbOptionsGroup {...args} />;
 
 export const Default = Template.bind({});
@@ -31,4 +31,4 @@ Default.args = {
     price: 0,
     formats: '.pfd .epub .mob',
   },
-} as IOptionsGroup;
+} as IAbOptionsGroup;

@@ -1,3 +1,3 @@
-export default interface ITag {
+export default interface IAbTag {
     text?: string
 }

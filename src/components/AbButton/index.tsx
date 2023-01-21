@@ -1,8 +1,8 @@
 import React from 'react';
-import IButton from '../../interfaces/Button';
+import IAbButton from '../../interfaces/Button';
 import StyledButton from './StyledButton';
 
-export function AbButton({ text = "Click here", customType = 'primary', onClick }: IButton) {
+export function AbButton({ text = "Click here", customType = 'primary', onClick }: IAbButton) {
   return (
     <StyledButton customType={customType} onClick={onClick}>
       {text}
