@@ -1,7 +1,7 @@
 import React from 'react';
 import { AbButton } from '../src';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import IButton from '../src/interfaces/Button';
+import IAbButton from '../src/interfaces/Button';
 
 export default {
   title: 'Components/AbButton',
@@ -15,11 +15,11 @@ export const Primary = Template.bind({});
 Primary.args = {
   text: "Primary",
   customType: "primary"
-} as IButton
+} as IAbButton
 
 export const Secondary = Template.bind({})
 
 Secondary.args = {
   text: "Secondary",
   customType: "secondary"
-} as IButton
+} as IAbButton

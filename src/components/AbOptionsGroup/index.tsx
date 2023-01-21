@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { IOption, IOptionsGroup } from '../../interfaces/Option';
+import { IAbOption, IAbOptionsGroup } from '../../interfaces/Option';
 import { StyledOption, StyledOptionsList } from './StyledOptionsGroup';
 
 export function AbOptionsGroup({
   defaultOption = null,
   options,
-}: IOptionsGroup) {
-  const [selected, setSelected] = useState<IOption | null>(defaultOption);
+}: IAbOptionsGroup) {
+  const [selected, setSelected] = useState<IAbOption | null>(defaultOption);
   return (
     <StyledOptionsList role="listbox">
       {options.map((option) => (

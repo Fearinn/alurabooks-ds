@@ -1,7 +1,7 @@
 import React from 'react';
-import ITag from '../../interfaces/Tag';
+import IAbTag from '../../interfaces/Tag';
 import StyledTag from './StyledTag';
 
-export function AbTag({ text = "I'm a tag" }: ITag) {
+export function AbTag({ text = "I'm a tag" }: IAbTag) {
   return <StyledTag>{text}</StyledTag>;
 }

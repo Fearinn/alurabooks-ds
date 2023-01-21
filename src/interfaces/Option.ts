@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export interface IOption {
+export interface IAbOption {
   identificator: number;
   selected?: boolean;
   title: string;
@@ -10,7 +10,7 @@ export interface IOption {
   onClick: () => void;
 }
 
-export interface IOptionsGroup {
-  options: IOption[];
-  defaultOption: IOption | null;
+export interface IAbOptionsGroup {
+  options: IAbOption[];
+  defaultOption: IAbOption | null;
 }
