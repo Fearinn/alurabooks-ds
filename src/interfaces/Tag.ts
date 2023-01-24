@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export default interface IAbTag {
-    text?: string
+    children: ReactNode;
 }
