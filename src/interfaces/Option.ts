@@ -7,10 +7,10 @@ export interface IAbOption {
   price: number;
   formats: string;
   children?: ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export interface IAbOptionsGroup {
   options: IAbOption[];
-  defaultOption: IAbOption | null;
+  defaultOption?: IAbOption | null;
 }
