@@ -14,7 +14,7 @@ const StyledCard = styled.div`
 
   @media (min-width: 1200px) {
     padding: 3rem 2rem 3rem 3rem;
-    max-width: 551px;
+    max-width: 725px;
   }
 `;
 
