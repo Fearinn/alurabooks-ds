@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const StyledCard = styled.div`
+const StyledCard = styled.div.attrs(props => ({
+  className: props.className
+}))`
   box-sizing: border-box;
   background-color: #ffffff;
   border-radius: 10px;
