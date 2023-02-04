@@ -8,6 +8,7 @@ export function AbInput({
   type = 'text',
   placeholder,
   onChange,
+  className
 }: IAbInput) {
   return (
     <StyledInput>
@@ -16,6 +17,7 @@ export function AbInput({
         type={type}
         placeholder={placeholder}
         onChange={onChange}
+        className={`${className}`}
         id={id}
       />
     </StyledInput>

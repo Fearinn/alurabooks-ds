@@ -5,10 +5,11 @@ import { StyledOption, StyledOptionsList } from './StyledOptionsGroup';
 export function AbOptionsGroup({
   defaultOption = null,
   options,
+  className
 }: IAbOptionsGroup) {
   const [selected, setSelected] = useState<IAbOption | null>(defaultOption);
   return (
-    <StyledOptionsList role="listbox">
+    <StyledOptionsList role="listbox" className={`${className}`}>
       {options.map((option) => (
         <StyledOption
           {...option}
