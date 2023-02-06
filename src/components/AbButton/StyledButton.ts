@@ -4,7 +4,7 @@ import IAbButton from '../../interfaces/Button';
 const StyledButton = styled.button<IAbButton>`
   box-sizing: border-box;
   background: ${(props: IAbButton) =>
-    props.customType === 'primary' ? '#eb9b00' : '#FFFFFF'};
+    props.customType === 'primary' ? '#eb9b00' : 'transparent'};
   padding: 1rem 2rem;
   border: 2px solid #eb9b00;
   color: ${(props: IAbButton) =>
