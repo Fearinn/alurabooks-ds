@@ -4,14 +4,16 @@ import StyledModal from './StyledModal';
 
 export function AbModal({ title, open = false, children, htmlId }: IAbModal) {
   const [isOpen, setIsOpen] = useState(open);
-
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (modalRef.current) {
       modalRef.current.setAttribute('tabindex', '0');
       modalRef.current.addEventListener('focusout', (event) => {
-        if (event.relatedTarget instanceof Node && !modalRef.current?.contains(event.relatedTarget))
+        if (
+          event.relatedTarget instanceof Node &&
+          !modalRef.current?.contains(event.relatedTarget)
+        )
           modalRef.current?.focus();
       });
     }
@@ -25,6 +27,10 @@ export function AbModal({ title, open = false, children, htmlId }: IAbModal) {
       }
     });
   }, []);
+
+  useEffect(() => {
+    setIsOpen(open);
+  }, [open]);
 
   return (
     <>
