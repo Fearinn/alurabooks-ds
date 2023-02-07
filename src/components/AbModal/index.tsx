@@ -1,17 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef} from 'react';
 import IAbModal from '../../interfaces/Modal';
 import StyledModal from './StyledModal';
 
-export function AbModal({ title, open = false, children, htmlId }: IAbModal) {
-  const [isOpen, setIsOpen] = useState(open);
-
+export function AbModal({ title, open, children, htmlId, whenClosed}: IAbModal) {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (modalRef.current) {
       modalRef.current.setAttribute('tabindex', '0');
       modalRef.current.addEventListener('focusout', (event) => {
-        if (event.relatedTarget instanceof Node && !modalRef.current?.contains(event.relatedTarget))
+        if (
+          event.relatedTarget instanceof Node &&
+          !modalRef.current?.contains(event.relatedTarget)
+        )
           modalRef.current?.focus();
       });
     }
@@ -21,14 +22,14 @@ export function AbModal({ title, open = false, children, htmlId }: IAbModal) {
         event.target instanceof Node &&
         !modalRef.current?.contains(event.target)
       ) {
-        setIsOpen(false);
+        whenClosed(false)
       }
     });
   }, []);
 
   return (
     <>
-      {isOpen && (
+      {open && (
         <StyledModal role="dialog" aria-labelledby={htmlId}>
           <div className="abmodal-box" ref={modalRef}>
             <header>
@@ -36,7 +37,7 @@ export function AbModal({ title, open = false, children, htmlId }: IAbModal) {
               <button
                 aria-label="fechar modal"
                 type="button"
-                onClick={() => setIsOpen(false)}
+                onClick={() => whenClosed(open)}
               >
                 X
               </button>
