@@ -12,6 +12,7 @@ export function AbModal({
   const modalBoxRef = useRef<HTMLDivElement>(null);
   const modalBgRef = useRef<HTMLDivElement>(null);
 
+
   const handleClick = (event: Event) => {
     if (
       event.target instanceof Node &&
@@ -23,8 +24,8 @@ export function AbModal({
 
   useEffect(() => {
     if (modalBoxRef.current) {
-      modalBoxRef.current.setAttribute('tabindex', '0');
-      modalBoxRef.current.addEventListener('focusout', (event) => {
+      modalBoxRef.current?.setAttribute('tabindex', '0');
+      modalBoxRef.current?.addEventListener('focusout', (event) => {
         if (
           event.relatedTarget instanceof Node &&
           !modalBoxRef.current?.contains(event.relatedTarget)
@@ -38,7 +39,7 @@ export function AbModal({
     return () => {
       modalBgRef.current?.removeEventListener('click', handleClick);
     };
-  }, []);
+  }, [open]);
 
   return (
     <>
