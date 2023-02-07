@@ -18,5 +18,6 @@ export * from './components/AbButton';
 export * from './components/AbCard';
 export * from './components/AbTag';
 export * from './components/AbOptionsGroup';
-export * from './components/AbInput'
-export * from './components/AbQuantity'
+export * from './components/AbInput';
+export * from './components/AbQuantity';
+export * from './components/AbModal';
