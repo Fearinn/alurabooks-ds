@@ -17,7 +17,7 @@ export function AbModal({
       event.target instanceof Node &&
       !modalBoxRef.current?.contains(event.target)
     ) {
-      whenClosed(false);
+      whenClosed();
     }
   };
 
@@ -50,7 +50,7 @@ export function AbModal({
               <button
                 aria-label="fechar modal"
                 type="button"
-                // onClick={() => whenClosed(false)}
+                onClick={() => whenClosed()}
               >
                 X
               </button>
