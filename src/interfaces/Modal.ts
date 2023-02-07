@@ -6,4 +6,5 @@ export default interface IAbModal {
   children?: ReactNode;
   className?: string;
   htmlId: string;
+  whenClosed: (open: boolean) => void
 }
