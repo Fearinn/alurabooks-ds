@@ -32,6 +32,7 @@ const StyledModal = styled.div`
     padding: 2.5rem 3rem 2.5rem 2.5rem;
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
     background-color: #ffffff;
     border-radius: 24px;
     margin: 0;
