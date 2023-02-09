@@ -3,7 +3,7 @@ export default interface IAbInput {
   type?: 'text' | 'email' | 'number' | 'password' | 'date';
   label: string;
   placeholder?: string;
-  onChange?: (value: string) => void;
+  onChange: (value: string) => void;
   className?: string;
-  value?: string;
+  value: string;
 }
