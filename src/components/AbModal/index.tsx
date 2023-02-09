@@ -6,7 +6,7 @@ export function AbModal({
   title,
   children,
   htmlId,
-  whenClosed,
+  onClose,
   open,
 }: IAbModal) {
   const modalBoxRef = useRef<HTMLDivElement>(null);
@@ -18,7 +18,7 @@ export function AbModal({
       event.target instanceof Node &&
       !modalBoxRef.current?.contains(event.target)
     ) {
-      whenClosed();
+      onClose();
     }
   };
 
@@ -51,7 +51,7 @@ export function AbModal({
               <button
                 aria-label="fechar modal"
                 type="button"
-                onClick={() => whenClosed()}
+                onClick={() => onClose()}
               >
                 X
               </button>
