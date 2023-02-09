@@ -1,5 +1,5 @@
 export default interface IAbInput {
-  id: string;
+  htmlId: string;
   type?: 'text' | 'email' | 'number' | 'password' | 'date';
   label: string;
   placeholder?: string;

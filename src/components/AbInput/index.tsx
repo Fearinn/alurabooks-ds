@@ -3,7 +3,7 @@ import IAbInput from '../../interfaces/Input';
 import StyledInput from './StyledInput';
 
 export function AbInput({
-  id,
+  htmlId,
   label,
   type = 'text',
   placeholder,
@@ -12,13 +12,13 @@ export function AbInput({
 }: IAbInput) {
   return (
     <StyledInput>
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={htmlId}>{label}</label>
       <input
         type={type}
         placeholder={placeholder}
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        id={id}
+        id={htmlId}
       />
     </StyledInput>
   );
