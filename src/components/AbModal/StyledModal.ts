@@ -36,6 +36,10 @@ const StyledModal = styled.div`
     border-radius: 24px;
     margin: 0;
 
+    header {
+      width: 100%;
+    }
+
     h2 {
       margin: 0;
       color: #eb9b00;
