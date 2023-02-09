@@ -5,4 +5,5 @@ export default interface IAbInput {
   placeholder?: string;
   onChange?: () => void;
   className?: string;
+  value?: string;
 }
