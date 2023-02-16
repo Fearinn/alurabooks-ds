@@ -1,3 +1,15 @@
+# v0.7.13 (Thu Feb 16 2023)
+
+#### ⚠️ Pushed to `master`
+
+- Update README.md ([@Fearinn](https://github.com/Fearinn))
+
+#### Authors: 1
+
+- Matheus Gomes ([@Fearinn](https://github.com/Fearinn))
+
+---
+
 # v0.7.12 (Thu Feb 09 2023)
 
 #### ⚠️ Pushed to `master`
