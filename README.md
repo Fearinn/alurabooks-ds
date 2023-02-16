@@ -11,3 +11,11 @@ Project from the course track [Aprofunde em React e Comunique APIs](https://curs
 ## 🚀 Improvements made by me
 
 - More acessible, responsive and flexible components.
+
+## 👨‍💻 Tech stack 
+
+- **TypeScript** (^4.8.4);
+- **React** (^18.2.0);
+- **Storybook** (^6.5.13);
+- **Styled Components** (^5.3.6);
+- **TSDX** (^0.14.1).
