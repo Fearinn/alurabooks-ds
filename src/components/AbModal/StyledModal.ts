@@ -6,7 +6,7 @@ const StyledModal = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
   right: 0;
