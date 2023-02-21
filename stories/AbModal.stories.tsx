@@ -18,5 +18,5 @@ Default.args = {
   title: "I'm a modal",
   open: true,
   htmlId: "abmodal-id",
-  whenClosed: () => console.log("closed")
+  onClose: () => console.log("closed")
 } as IAbModal;
