@@ -3,9 +3,11 @@ import { IAbOption } from '../../interfaces/Option';
 
 export const StyledOptionsList = styled.div`
   box-sizing: border-box;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 194px));
+  justify-content: center;
   font-family: 'Poppins', sans-serif;
-  gap: 1.25rem;
+  gap: 1.5rem;
 
   * {
     box-sizing: border-box;
@@ -18,6 +20,8 @@ export const StyledOption = styled.div<IAbOption>`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  gap: 0.5rem;
   background: ${(props: IAbOption) =>
     props.selected
       ? 'linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%)'
@@ -29,10 +33,8 @@ export const StyledOption = styled.div<IAbOption>`
       : '#eb9b00'};
   border-radius: 8px;
   cursor: pointer;
-  gap: 0.5rem;
-  width: 194px;
-  height: 88px;
-  padding: 0.5rem 0;
+  
+  padding: 0.5rem;
   font-size: 0.75rem;
   color: ${(props: IAbOption) => (props.selected ? '#FFFFFF' : '#eb9b00')};
 
