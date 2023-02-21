@@ -22,13 +22,13 @@ Default.args = {
       identificator: 2,
       title: 'impresso',
       price: 0,
-      formats: '.pfd .epub .mob',
+      formats: ['.pfd', '.epub', '.mob'],
     },
   ],
   defaultOption: {
     identificator: 1,
     title: 'e-book',
     price: 0,
-    formats: '.pfd .epub .mob',
+    formats: ['.pfd', '.epub', '.mob'],
   },
 } as IAbOptionsGroup;

@@ -5,7 +5,7 @@ export interface IAbOption {
   selected?: boolean;
   title: string;
   price: number;
-  formats: string;
+  formats: string[];
   children?: ReactNode;
   onClick?: () => void;
   className?: string;
