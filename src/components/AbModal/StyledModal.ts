@@ -12,11 +12,15 @@ const StyledModal = styled.div`
   right: 0;
   top: 0;
   background-color: rgba(101, 101, 101, 0.85);
+  padding: 0.5rem;
+  width: 100%;
+  word-break: break-all;
   z-index: 99;
 
   header {
     display: flex;
     justify-content: space-between;
+    max-width: 100%;
 
     button {
       background-color: transparent;
@@ -36,6 +40,8 @@ const StyledModal = styled.div`
     background-color: #ffffff;
     border-radius: 24px;
     margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
 
     header {
       width: 100%;
