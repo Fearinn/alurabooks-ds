@@ -8,11 +8,11 @@ export interface IAbOption {
   formats: string;
   children?: ReactNode;
   onClick?: () => void;
-  className: string;
+  className?: string;
 }
 
 export interface IAbOptionsGroup {
   options: IAbOption[];
   defaultOption?: IAbOption | null;
-  className: string;
+  className?: string;
 }
