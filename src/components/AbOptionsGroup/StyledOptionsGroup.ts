@@ -15,7 +15,7 @@ export const StyledOptionsList = styled.div`
   }
 `;
 
-export const StyledOption = styled.div<IAbOption>`
+export const StyledOption = styled.button<IAbOption>`
   display: flex;
   flex-direction: column;
   align-items: center;

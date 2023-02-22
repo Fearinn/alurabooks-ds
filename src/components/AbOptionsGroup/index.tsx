@@ -17,15 +17,19 @@ export function AbOptionsGroup({
         return (
           <StyledOption
             {...option}
+            aria-labelledby={`aboption${option.identificator}-title-id`}
             key={option.identificator}
             role="option"
+            tabIndex={0}
             aria-selected={selected?.identificator === option.identificator}
             selected={selected?.identificator === option.identificator}
             onClick={() => {
               setSelected(option);
             }}
           >
-            <h3>{option.title}</h3>
+            <h3 id={`aboption${option.identificator}-title-id`}>
+              {option.title}
+            </h3>
             <span>
               <strong>{price}</strong>
             </span>
