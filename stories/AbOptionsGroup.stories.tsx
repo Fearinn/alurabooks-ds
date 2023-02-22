@@ -17,7 +17,12 @@ export const Default = Template.bind({});
 
 Default.args = {
   options: [
-    { identificator: 1, title: 'e-book', price: 0, formats: '.pfd .epub .mob' },
+    {
+      identificator: 1,
+      title: 'e-book',
+      price: 0,
+      formats: ['.pfd', '.epub', '.mob'],
+    },
     {
       identificator: 2,
       title: 'impresso',

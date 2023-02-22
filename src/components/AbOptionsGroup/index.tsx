@@ -33,7 +33,7 @@ export function AbOptionsGroup({
             <span>
               <strong>{price}</strong>
             </span>
-            <span>{option.formats}</span>
+            <span>{option.formats?.toString().replaceAll(',', ' ')}</span>
           </StyledOption>
         );
       })}
