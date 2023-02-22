@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { IAbQuantity } from '../../interfaces/Quantity';
 import StyledQuantity from './StyledQuantity';
 
-export function AbQuantity() {
-  const [quantity, setQuantity] = useState(0);
+export function AbQuantity({
+  onChangeQuantity,
+  initialQuantity = 0,
+}: IAbQuantity) {
+  const [quantity, setQuantity] = useState(initialQuantity);
   return (
     <StyledQuantity>
       <label>Quantidade</label>
@@ -10,7 +14,10 @@ export function AbQuantity() {
         <button
           aria-controls="ab_quantity_id"
           onClick={() => {
-            if (quantity) setQuantity(quantity - 1);
+            if (quantity) {
+              if (onChangeQuantity) onChangeQuantity(quantity - 1);
+              setQuantity(quantity - 1);
+            }
           }}
           type="button"
         >
@@ -21,7 +28,10 @@ export function AbQuantity() {
         </span>
         <button
           aria-controls="ab_quantity_id"
-          onClick={() => setQuantity(quantity + 1)}
+          onClick={() => {
+            if (onChangeQuantity) onChangeQuantity(quantity + 1);
+            setQuantity(quantity + 1);
+          }}
           type="button"
         >
           +
