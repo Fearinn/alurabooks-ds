@@ -1,7 +1,7 @@
 import React from 'react';
 import { AbOptionsGroup } from '../src';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { IAbOptionsGroup } from '../src/interfaces/Option';
+import { IAbOption, IAbOptionsGroup } from '../src/interfaces/Option';
 // import IOptionsGroup from '../src/interfaces/OptionsGroup';
 
 export default {
@@ -36,4 +36,5 @@ Default.args = {
     price: 0,
     formats: ['.pfd', '.epub', '.mob'],
   },
+  onSelectOption: (option: IAbOption) => console.log(option),
 } as IAbOptionsGroup;

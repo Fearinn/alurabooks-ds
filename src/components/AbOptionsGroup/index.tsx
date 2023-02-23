@@ -5,11 +5,12 @@ import { StyledOption, StyledOptionsList } from './StyledOptionsGroup';
 export function AbOptionsGroup({
   defaultOption = null,
   options,
+  onSelectOption
 }: IAbOptionsGroup) {
   const [selected, setSelected] = useState<IAbOption | null>(defaultOption);
   return (
     <StyledOptionsList role="listbox">
-      {options.map((option) => {
+      {options.map((option: IAbOption) => {
         const price = Intl.NumberFormat('pt-br', {
           style: 'currency',
           currency: 'BRL',
@@ -25,6 +26,7 @@ export function AbOptionsGroup({
             selected={selected?.identificator === option.identificator}
             onClick={() => {
               setSelected(option);
+              if (onSelectOption) onSelectOption(option)
             }}
           >
             <h3 id={`aboption${option.identificator}-title-id`}>

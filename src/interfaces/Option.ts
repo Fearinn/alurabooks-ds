@@ -15,4 +15,5 @@ export interface IAbOptionsGroup {
   options: IAbOption[];
   defaultOption?: IAbOption | null;
   className?: string;
+  onSelectOption?: (option: IAbOption) => void;
 }
